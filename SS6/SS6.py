@@ -60,16 +60,40 @@
 
 ##### Tuple
 ## Tạo Tuple
-fruits = ('apple', 'banana', "orange")
-single_fruit = ('watermelon',) #Cần dấu "," để Python biết đây là tuple.
+# fruits = ('apple', 'banana', "orange")
+# single_fruit = ('watermelon',) #Cần dấu "," để Python biết đây là tuple.
 
 ## truy cập phần tử: giống hệt list
-print(fruits[0])
+# print(fruits[0])
 
 ## sắp xếp tuple: Dù tuple là bất biến nhưng chúng ta vẫn có thể sx phần tử bằng hàm: sorted() 
 ## hoặc comprehension
-numberTuple = (3,2,4,10)
-sorted_number = sorted(numberTuple)
-print(sorted_number)
+# numberTuple = (3,2,4,10)
+# sorted_number = sorted(numberTuple)
+# print(sorted_number)
+
+
+
+
+##### Giải bài tập thực hành trên lớp
+## Bài a;
+a = input("Mời người dùng nhập món 1")
+b = input("Mời người dùng nhập món 2")
+c = input("Mời người dùng nhập món 3")
+foods = []
+foods.append(a)
+foods.append(b)
+foods.append(c)
+
+print(foods)
+
+# Duyệt danh sách để in ra từng phần tử
+for index in foods:
+    print(index)
+
+removeMonAn = input("Mời người dùng nhập vào món ăn muốn bỏ")
+print(f"Món ăn người dùng muốn bỏ là {removeMonAn}")
+foods.remove(removeMonAn)
+print(foods)
 
 
