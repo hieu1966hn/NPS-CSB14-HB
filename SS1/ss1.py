@@ -8,7 +8,7 @@
 # name = "Trung Hiếu"
 # print(name)
 
-from turtle import *
+# from turtle import *
 
 # Vẽ hình vuông
 # forward(200)
@@ -32,14 +32,17 @@ from turtle import *
 # forward(200)
 
 # Vẽ ngôi sao 5 cánh
-forward(200)
-right(144)
-forward(200)
-right(144)
-forward(200)
-right(144)
-forward(200)
-right(144)
-forward(200)
+# forward(200)
+# right(144)
+# forward(200)
+# right(144)
+# forward(200)
+# right(144)
+# forward(200)
+# right(144)
+# forward(200)
 
-mainloop()
+# mainloop()
+
+
+
