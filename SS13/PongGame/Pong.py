@@ -39,6 +39,8 @@ player1_score = 0
 player2_score = 0
 font = pygame.font.Font(None, 74)
 
+rect = pygame.Rect(player1_x, player1_y,  paddle_width, paddle_height)
+
 ### Main game loop
 running = True
 while running:
@@ -65,7 +67,7 @@ while running:
     ball_x += ball_speed_x
     ball_y += ball_speed_y
 
-    ## Ball collision with top and bottom
+    ## Ball collision with top and bottom (nghiên cứu sửa thế nào)
     if ball_y <=0  or ball_y >= screen_height - ball_size:
         ball_speed_y *= -1 ## ball_speed_y = ball_speed_y * (-1)
     
@@ -78,8 +80,25 @@ while running:
     ### fill screen
     screen.fill(black)
 
+    
+ 
+    ### Draw paddles and Ball
+    player1 = pygame.draw.rect(screen, white, (player1_x, player1_y, paddle_width, paddle_height))
+    player2 = pygame.draw.rect(screen, white,(player2_x, player2_y, paddle_width, paddle_height))
+    ball = pygame.draw.ellipse(screen, white, (ball_x, ball_y, ball_size, ball_size))
 
-    ### Draww
+    ### Draw scores
+
+    ### Update Display
+    pygame.display.flip()
+
+
+    ### Frame rate
+    pygame.time.Clock().tick(60)
+
+pygame.quit()
+sys.exit()
+
 
 
 
