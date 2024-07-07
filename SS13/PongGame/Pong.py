@@ -60,7 +60,27 @@ while running:
         player2_y -= paddle_speed ## mỗi lần ấn thì trừ đi 7 đơn vị
     if keys[pygame.K_DOWN] and player2_y < screen_height - paddle_height:
         player2_y += paddle_speed ## mỗi lần ấn thì trừ đi 7 đơn vị
+
+    ## Move Ball
+    ball_x += ball_speed_x
+    ball_y += ball_speed_y
+
+    ## Ball collision with top and bottom
+    if ball_y <=0  or ball_y >= screen_height - ball_size:
+        ball_speed_y *= -1 ## ball_speed_y = ball_speed_y * (-1)
     
+    ## Ball collision with paddles (thanh player)
+    if (ball_x <= player1_x + paddle_width and player1_y <= ball_y <= player1_y + paddle_height) or (ball_x >= player2_x - ball_size and player2_y <= ball_y <= player2_y + paddle_height):
+        ball_speed_y *= -1 ## ball_speed_y = ball_speed_y * (-1)
+
+    #### Ball goes out of bounds
+
+    ### fill screen
+    screen.fill(black)
+
+
+    ### Draww
+
 
 
 
