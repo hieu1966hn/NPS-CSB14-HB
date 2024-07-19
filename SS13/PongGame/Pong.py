@@ -39,7 +39,7 @@ player1_score = 0
 player2_score = 0
 font = pygame.font.Font(None, 74)
 
-rect = pygame.Rect(player1_x, player1_y,  paddle_width, paddle_height)
+
 
 ### Main game loop
 running = True
